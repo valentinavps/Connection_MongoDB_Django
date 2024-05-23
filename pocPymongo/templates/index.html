@@ -1,0 +1,13 @@
+<h1>Horários</h1>
+<br>
+<div>
+    <a class="button" href='{% url "add" %}'>Adicionar horário</a>
+</div>
+<br>
+<ul>
+{% for t in Time %} <!-- object_list --> 
+    <li>{{ t.Time }}</li>
+{% empty %}
+    <li>Nenhum horário registrado.</li>
+{% endfor %}
+</ul>
